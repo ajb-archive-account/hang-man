@@ -35,7 +35,8 @@ while (remainingLetters > 0) {
   //show the player their progress
   alert(answerArray.join(" "));
   //player inputs a letter
-  let guess = prompt("pick a letter or press cancel to exit the game.");
+  let input = prompt("pick a letter or press cancel to exit the game.");
+  let guess = input.toLowerCase();
   if (guess === null) {
     //exit the game
     break;
