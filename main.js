@@ -1,8 +1,8 @@
-let name = prompt("What is your name?");
-console.log("Hello" + " " + name);
+let playerName = prompt("What is your name?");
+console.log("Hello" + " " + playerName);
 
 //Pick a random word
-let words = [
+let wordList = [
   "command",
   "jail",
   "compare",
@@ -18,20 +18,35 @@ let words = [
   "ski"
 ];
 
-let word = words[Math.floor(Math.random() * words.length)];
+let randomWord = wordList[Math.floor(Math.random() * wordList.length)];
 
 let answerArray = [];
-for (let i = 0; i < words.length; i++) {
+for (let i = 0; i < wordList.length; i++) {
   answerArray[i] = "_";
 }
 
-let remainingLeters = word.length;
+let remainingLeters = randomWord.length;
+
+// While the word has not been guessed {
+while (remainingLetters > 0) {
+  alert(answerArray.join(" "));
+}
+
+let guess = prompt("pick a letter or press cancel to exit the game.");
+  if (guess === null) {
+    break;
+  } else if (guess.length !== 1) {
+      alert("Only one letter at a time please.");
+  } else // update game status
+
+
+
+
+  // Show the player their progress
+  // Take input from the player
+  // Update answerArray and remainingLetters for every correct guess
 
 /*
-While the word has not been guessed {
-  Show the player their current progress
-  Get a guess from the player
-
   If the player wants to quit the game {
     Quit the game
   }
