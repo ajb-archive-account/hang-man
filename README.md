@@ -1,0 +1,1 @@
+A basic hangman game played in prompts and alerts
